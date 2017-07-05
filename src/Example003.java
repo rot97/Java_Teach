@@ -14,7 +14,7 @@ public class Example003 {
         double b[] = {3.14159, 2.71, 9.81, 6.67e-11};
         char c[] = {'p', 'e', 'g', 'G'};
         for(int i = 0; i < b.length; i++){
-            System.out.println(c[i] +" = " + b[i]);
+            System.out.println(c[i] + " = " + b[i]);
         }
     }
 }
