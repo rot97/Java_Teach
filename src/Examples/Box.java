@@ -24,6 +24,14 @@ public class Box {
         depth = d;
     }
 
+    public Box (double w) {
+        width = heigth = depth = w;
+    }
+
+    public Box () {
+        width = heigth = depth = 0;
+    }
+
     protected void finalize(){
         System.out.println("Сборшик мусора работает");
     }
