@@ -23,4 +23,8 @@ public class Box {
         heigth = h;
         depth = d;
     }
+
+    protected void finalize(){
+        System.out.println("Сборшик мусора работает");
+    }
 }
