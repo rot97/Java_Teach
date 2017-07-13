@@ -35,4 +35,8 @@ public class Box {
     protected void finalize(){
         System.out.println("Сборшик мусора работает");
     }
+
+    boolean equals (Box a){
+        return a.width == width && a.heigth == heigth && a.depth == depth;
+    }
 }
