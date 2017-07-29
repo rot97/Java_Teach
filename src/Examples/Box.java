@@ -4,9 +4,9 @@ package Examples;
  * Created by Igor on 13.07.2017.
  */
 public class Box {
-    private double width;
-    private double heigth;
-    private double depth;
+    protected double width;
+    protected double heigth;
+    protected double depth;
 
    public double volum(){
         return width * heigth * depth;
@@ -16,6 +16,12 @@ public class Box {
         width = w;
         heigth = h;
         depth = d;
+    }
+
+    public Box (Box obj){
+        width = obj.width;
+        heigth = obj.heigth;
+        depth = obj.depth;
     }
 
     public Box (double w, double h, double d) {
@@ -29,14 +35,14 @@ public class Box {
     }
 
     public Box () {
-        width = heigth = depth = 0;
+        width = heigth = depth = -1;
     }
 
     protected void finalize(){
         System.out.println("Сборшик мусора работает");
     }
 
-    boolean equals (Box a){
+    public boolean equals (Box a){
         return a.width == width && a.heigth == heigth && a.depth == depth;
     }
 }
