@@ -1,7 +1,7 @@
 /**
  * Created by Igor on 30.07.2017.
  */
-class Figure{
+abstract class Figure{
     protected double dim1, dim2;
 
     Figure(double a, double b){
@@ -9,10 +9,7 @@ class Figure{
         dim2 = b;
     }
 
-    double area(){
-        System.out.println("Площадь не определенна");
-        return 0;
-    }
+    abstract double area();
 }
 
 class Rectangle extends Figure{
@@ -40,7 +37,6 @@ class Triangle extends Figure{
 
 public class Example012 {
     public static void main(String[] args) {
-        Figure f = new Figure (10, 10);
         Rectangle r = new Rectangle (9,5);
         Triangle t = new Triangle (10, 8 );
         Figure figref;
@@ -48,8 +44,6 @@ public class Example012 {
         figref = r;
         System.out.println( " Плoщaдь равна " + figref.area());
         figref = t;
-        System.out.println( " Плoщaдь равна " + figref.area());
-        figref = f;
         System.out.println( " Плoщaдь равна " + figref.area());
     }
 }
